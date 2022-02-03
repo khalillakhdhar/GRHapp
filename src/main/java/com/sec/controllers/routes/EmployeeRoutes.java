@@ -7,11 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.sec.controllers.services.EmployeeService;
 import com.sec.model.Employee;
 
-@Controller
+@RestController
 public class EmployeeRoutes {
 @Autowired
 EmployeeService api;
@@ -20,7 +21,7 @@ public List<Employee> getAll()
 {
 return api.getEmployee();	
 }
-@PostMapping("employee")
+@PostMapping("/employee")
 public Employee create(@RequestBody Employee employee)
 {
 return api.createUser(employee);	
