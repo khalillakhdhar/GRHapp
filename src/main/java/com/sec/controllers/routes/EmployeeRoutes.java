@@ -21,7 +21,7 @@ public List<Employee> getAll()
 {
 return api.getEmployee();	
 }
-@PostMapping("/employee")
+@PostMapping("employee")
 public Employee create(@RequestBody Employee employee)
 {
 return api.createUser(employee);	

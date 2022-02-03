@@ -14,9 +14,21 @@ private String nom,prenom,email,mdp,adresse;
 private int age;
 private float salaire;
 private String login;
-
+private String description;
 
 private String tel,recrutement,grade;
+
+
+
+public String getDescription() {
+	return description;
+}
+
+
+
+public void setDescription(String description) {
+	this.description = description;
+}
 
 
 
